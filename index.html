@@ -10,7 +10,7 @@
 <body>
   <header class="main-header">
     <nav>
-      <a href="#"><img src="img/index-logo.svg" alt="Логотип Барбершоп" width="368px" height="204px"></a>
+      <a href="#" tabindex="-1" ><img src="img/index-logo.svg" alt="Логотип Барбершоп" width="368px" height="204px"></a>
       <ul class="main-navigation">
         <li class="main-navigation-item"><a href="info.html">Информация</a></li>
         <li class="main-navigation-item"><a href="news.html">Новости</a></li>
@@ -19,7 +19,7 @@
         <li class="main-navigation-item"><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="user-navigation-item"><a href="enter.html">Вход</a></li>
+        <li class="user-navigation-item"><a href="login.html">Вход</a></li>
       </ul>
     </nav>
   </header>
@@ -73,16 +73,24 @@
     <section class="appoint">
       <h2 class="section-title">Записаться</h2>
       <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-      <form action="">
-        <label for="">Дата</label>
-        <input type="date" placeholder="25.04.2020">
-        <label for="">Время</label>
-        <input type="time" placeholder="15:00">
-        <label for="">Ваше имя</label>
-        <input type="fname" placeholder="Борода">
-        <label for="">Телефон</label>
-        <input type="tel" placeholder="+ 99890 90 432 0033">
-        <input type="submit" value="Отправить">
+      <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
+          <p class="appointment-item">
+            <label for="appointment-date">Дата</label>
+            <input type="text" placeholder="25.04.2020" name="date" id="appointment-date">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Время</label>
+            <input type="text" placeholder="15:00" name="time" id="appointment-time">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя</label>
+            <input type="fname" placeholder="Борода" name="name" id="appointment-name">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-tel">Телефон</label>
+            <input type="tel" placeholder="+ 99890 90 432 0033" name="tel" id="appointment-tel">
+          </p>
+          <input type="submit" value="Отправить">
       </form>
     </section>
   </main>
@@ -101,26 +109,40 @@
       </ul>
       <p class="crater-side">
         <b>Разработано</b>
-        <a href="github.com/umka17">Umka17</a>
+        <a href="http://www.github.com/umka17">Umka17</a>
       </p>
     </div>
   </footer>
   <section class="login-popup">
     <h2 class="section-title login">Личный кабинет</h2>
-    <form action="" method="get">
+    <form action="http://echo.htmlacademy.ru" method="POST" class="login-form">
       <b>Введите пожалуйста свой логин и пароль</b>
-      <input type="text" name="" id="">
-      <input type="password" name="" id="">
-      <label for="">Запомните меня</label>
-      <input type="checkbox" name="" id="">
-      <a href="forget-password.html">Я забыл пароль!</a>
+      <p>
+        <label for="login-login" class="visually-hidden">Логин</label>
+        <input tlaype="text" name="login" id="login-login" placeholder="Логин">
+      </p>
+      <p>
+        <label for="login-password" class="visually-hidden">Пароль</label>
+        <input type="password" name="password" id="login-password" placeholder="Пароль">
+      </p>
+      <p>
+        <label for="login-remember" class="login-checkbox">
+          <input type="checkbox" name="remember" id="login-remember" checked class="visually-hidden">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a href="forget-password.html" class="restore">Я забыл пароль!</a>
+      </p>
       <input type="submit" value="Войти">
-      <button>X</button>
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
   <section class="map">
-    <h2 class="section-title visually-hidden">Карта</h2>
-    <button>X</button>
+    <h2 class="section-title visually-hidden">Карта</h2> 
+    <p>
+      <img src="img/map.jpg" alt="Офис компаниии по адресу ул. Большая Конюшенная 19/8 , Санкт-Петербург">
+    </p>
+    <button type="button" class="modal-close">Закрыть</button>
   </section>
 </body>
 </html>

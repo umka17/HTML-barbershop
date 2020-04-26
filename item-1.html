@@ -80,16 +80,27 @@
   </footer>
   <section class="login-popup">
     <h2 class="section-title login">Личный кабинет</h2>
-    <form action="" method="get">
+    <form action="http://echo.htmlacademy.ru" method="POST" class="login-form">
       <b>Введите пожалуйста свой логин и пароль</b>
-      <input type="text" name="" id="">
-      <input type="password" name="" id="">
-      <label for="">Запомните меня</label>
-      <input type="checkbox" name="" id="">
-      <a href="forget-password.html">Я забыл пароль!</a>
+      <p>
+        <label for="login-login" class="visually-hidden">Логин</label>
+        <input tlaype="text" name="login" id="login-login" placeholder="Логин">
+      </p>
+      <p>
+        <label for="login-password" class="visually-hidden">Пароль</label>
+        <input type="password" name="password" id="login-password" placeholder="Пароль">
+      </p>
+      <p>
+        <label for="login-remember" class="login-checkbox">
+          <input type="checkbox" name="remember" id="login-remember" checked class="visually-hidden">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a href="forget-password.html" class="restore">Я забыл пароль!</a>
+      </p>
       <input type="submit" value="Войти">
-      <button>X</button>
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
 </html>
