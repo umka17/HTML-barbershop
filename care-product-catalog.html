@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Магазин</title>
   <link rel="stylesheet" href="normalize.css">
-  <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body class="cpc">
   <header class="main-header">
-    <nav>
+    <nav class="main-navigation">
       <a href="index.html"><img src="img/logo.svg" alt="Логотип Барбершоп" width="111px" height="24px"></a>
-      <ul class="main-navigation">
-        <li class="main-navigation-item"><a href="info.html">Информация</a></li>
-        <li class="main-navigation-item"><a href="news.html">Новости</a></li>
-        <li class="main-navigation-item"><a href="price.html">Прайс-лист</a></li>
-        <li class="main-navigation-item current"><a href="shop.html">Магазин</a></li>
-        <li class="main-navigation-item"><a href="contacts.html">Контакты</a></li>
+      <ul class="site-navigation">
+        <li class="site-navigation-item"><a href="info.html">Информация</a></li>
+        <li class="site-navigation-item"><a href="news.html">Новости</a></li>
+        <li class="site-navigation-item"><a href="price.html">Прайс-лист</a></li>
+        <li class="site-navigation-item current"><a href="shop.html">Магазин</a></li>
+        <li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
         <li class="user-navigation-item"><a href="enter.html">Вход</a></li>
@@ -33,73 +33,83 @@
     <section>
       <h2 class="section-title visually-hidden">Фильтр товаров</h2>
       <form action="http://echo.htmlacademy.ru" method="GET" class="filter">
-        <fieldset>
+        <fieldset class="producer-fieldset">
           <legend class="filter-title">Производители:</legend>
           <ul class="producer-list">
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden" checked>
                 <span class="checkbox-indicator"></span>
+                Baxter of California
               </label>
             </li>
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden">
                 <span class="checkbox-indicator"></span>
+                Mr Natty
               </label>
             </li>
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden" checked>
                 <span class="checkbox-indicator"></span>
+                Suavecito
               </label>
             </li>
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden">
                 <span class="checkbox-indicator"></span>
+                Malin+Goetz
               </label>
             </li>
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden">
                 <span class="checkbox-indicator"></span>
+                Murray’s
               </label>
             </li>
             <li class="producer-item">
               <label for="" class="producer-checkbox">
                 <input type="checkbox" name="" id="" class="visually-hidden" checked>
                 <span class="checkbox-indicator"></span>
+                American Crew
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="group-fieldset">
           <legend class="filter-title">Группы товаров:</legend>
           <ul class="group-list">
             <li class="group-item">
               <label for="" class="group-radio">
                 <input type="radio" name="group" id="" class="visually-hidden">
                 <span class="radio-indicator"></span>
+                Бритвенные принадлежности
               </label>
             </li>
             <li class="group-item">
               <label for="" class="group-radio">
                 <input type="radio" name="group" id="" class="visually-hidden">
                 <span class="radio-indicator"></span>
+                Средства для ухода
               </label>
             </li>
             <li class="group-item">
               <label for="" class="group-radio">
                 <input type="radio" name="group" id="" class="visually-hidden">
                 <span class="radio-indicator"></span>
+                Аксессуары
               </label>
             </li>
           </ul>
-        </fieldset>
+        </fieldset> 
+        <button type="submit" class="button">Показать</button>
       </form>
     </section>
-    <section>
+    <section class="catalog">
       <h2 class="secton-title visuallt-hidden">Список средств для ухода</h2>
       <ul class="catalog-list">
 
@@ -201,29 +211,29 @@
 
       </ul>
       <ul class="pagination-list">
-        <li class="pagination-item"><a href="">1</a></li>
-        <li class="pagination-item current"><a>2</a></li>
-        <li class="pagination-item"><a href="">3</a></li>
-        <li class="pagination-item"><a href="">4</a></li>
+        <li class="pagination-item"><a href="" class="button">1</a></li>
+        <li class="pagination-item current"><a class="button">2</a></li>
+        <li class="pagination-item"><a href="" class="button">3</a></li>
+        <li class="pagination-item"><a href="" class="button">4</a></li>
       </ul>
     </section>
   </main>
-  <footer>
-    <p>
+  <footer class="main-footer">
+    <p class="footer-contacts">
       Барбершоп «бородинский» <br>
       Адрес: г. Санкт-петербург, ул. Б. Конюшенная, д. 19/8 <br>
-      Как нас найти? <br>
+      <a href="map.html">Как нас найти?</a> <br>
       Телефон: +7 (495) 666-02-66
     </p>
     <div class="social-container">
       <ul>
         <li><a href="vk.com">Вконтакте</a></li>
         <li><a href="fb.com">Фейсбук</a></li>
-        <li><a href="instagram.com">Инстаграм   </a></li>
+        <li><a href="instagram.com">Инстаграм </a></li>
       </ul>
-      <p class="crater-side">
+      <p class="creater-side">
         <b>Разработано</b>
-        <a href="github.com/umka17">Umka17</a>
+        <a class="button" href="http://www.github.com/umka17">Umka17</a>
       </p>
     </div>
   </footer>
@@ -233,7 +243,7 @@
       <b>Введите пожалуйста свой логин и пароль</b>
       <p>
         <label for="login-login" class="visually-hidden">Логин</label>
-        <input tlaype="text" name="login" id="login-login" placeholder="Логин">
+        <input type="text" name="login" id="login-login" placeholder="Логин">
       </p>
       <p>
         <label for="login-password" class="visually-hidden">Пароль</label>
